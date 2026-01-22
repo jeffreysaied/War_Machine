@@ -1,13 +1,49 @@
 # War Machine Excel File - Comprehensive Understanding
 
+## 📑 Table of Contents
+- [Overview](#overview)
+- [Quick Reference](#quick-reference)
+- [Detailed Sheet Breakdown](#detailed-sheet-breakdown)
+  - [Sheet 1: Leadership and comfort](#sheet-1-leadership-and-comfort)
+  - [Sheet 2: Barracks](#sheet-2-barracks)
+  - [Sheet 3: Favorite Units](#sheet-3-favorite-units)
+  - [Sheet 4: ExtraSheet](#sheet-4-extrasheet)
+  - [Sheet 5: Unit Sheet](#sheet-5-unit-sheet)
+  - [Sheet 6: Players](#sheet-6-players)
+  - [Sheet 7: Cost](#sheet-7-cost)
+  - [Sheet 8: ExtraCost](#sheet-8-extracost)
+  - [Sheet 9: Attendance](#sheet-9-attendance)
+- [Key Insights](#key-insights)
+- [Technical Details](#technical-details)
+
+---
+
 ## Overview
 The **War Machine.xlsx** file is a comprehensive game management spreadsheet for what appears to be a guild/house organization in the game "Conqueror's Blade". It tracks player information, unit preferences, leadership stats, barracks status, unit costs, and attendance.
 
-## File Structure
-
-### Total Sheets: 9
+**Total Sheets:** 9  
+**Total Players Tracked:** ~57-67 active players  
+**Total Unit Types:** 141 different units  
 
 ---
+
+## Quick Reference
+
+| Sheet Name | Primary Purpose | Key Data Points |
+|------------|----------------|-----------------|
+| Leadership and comfort | Player weapon classes & skill ratings | 57 players, 9 unit categories rated 0-10 |
+| Barracks | Unit mastery tracking | 55 players, "Yes" for maxed units |
+| Favorite Units | Player preferences | 49 players, Top 5 units each |
+| ExtraSheet | Backup battle planning | 117 rows, defensive scenarios |
+| Unit Sheet | Primary battle planning | 193 rows, player assignments |
+| Players | Central player database | 67 players, leadership stats by armor |
+| Cost | Unit costs & deployment | 141 units, cost tracking |
+| ExtraCost | Alternative cost tracking | 141 units, backup scenarios |
+| Attendance | Event participation | 117 rows, dated attendance |
+
+---
+
+## Detailed Sheet Breakdown
 
 ## Sheet 1: Leadership and comfort
 **Purpose:** Track player information and their comfort level with different unit types
@@ -45,47 +81,62 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
 ## Sheet 2: Barracks
 **Purpose:** Track which units each player has maxed/mastered/doctrined
 
+| Attribute | Value |
+|-----------|-------|
+| Players Tracked | 55 |
+| Tracking Method | "Yes" for maxed units |
+| Use Case | Quick deployment availability check |
+
 **Key Information:**
 - Lists player names
 - Columns for various unit types (Zweihanders, etc.)
 - "Yes" indicates a unit is fully maxed/mastered/doctrined
-- 55 players tracked
-
-**Use Case:** Quickly see which players have which units available for deployment
 
 ---
 
 ## Sheet 3: Favorite Units
 **Purpose:** Track each player's top 5 favorite units in order of preference
 
+| Attribute | Value |
+|-----------|-------|
+| Players Listed | 49 |
+| Preference Slots | Top 5 units per player |
+| Use Case | Optimize deployment strategy |
+
 **Structure:**
 - Player Name column
 - Favorite Unit #1 through #5
-- 49 players listed their preferences
 
 **Sample Favorites:**
 - aaronpolo: Spartans
 - AKBerserk: Siphonarioi
 
-**Use Case:** Helps commanders understand player preferences for optimal deployment strategy
-
 ---
 
 ## Sheet 4: ExtraSheet
-**Purpose:** Appears to be an auxiliary battle/defense planning sheet
+**Purpose:** Auxiliary battle/defense planning sheet
+
+| Attribute | Value |
+|-----------|-------|
+| Data Rows | 117 non-empty rows |
+| Focus | Defensive scenarios |
 
 **Key Columns:**
 - Defense scenarios (Hidden City, etc.)
 - Player assignments
 - Player Leadership values
-- Likely used for planning defensive lineups
-
-**Data:** 117 non-empty rows of battle planning data
+- Used for planning defensive lineups
 
 ---
 
 ## Sheet 5: Unit Sheet
 **Purpose:** Main battle lineup planning sheet
+
+| Attribute | Value |
+|-----------|-------|
+| Data Rows | 193 detailed rows |
+| Focus | Primary battle planning |
+| Role | Organizing battle deployments |
 
 **Key Columns:**
 - Defense scenarios (Wall Fort, etc.)
@@ -93,13 +144,17 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
 - First Defense, Second Defense (unit assignments)
 - Player Leadership values
 
-**Data:** 193 rows of detailed battle planning
 **Use Case:** Primary tool for organizing who brings which units to specific battles
 
 ---
 
 ## Sheet 6: Players
 **Purpose:** Central player database with leadership calculations
+
+| Attribute | Value |
+|-----------|-------|
+| Players Tracked | 67 |
+| Data Points | Leadership by armor class |
 
 **Key Columns:**
 - Player names
@@ -109,13 +164,17 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
   - Heavy armor
 - Current leadership with selected weapon (calculated via formulas)
 
-**Data:** 67 players tracked
 **Use Case:** Quick reference for player leadership stats with different armor classes
 
 ---
 
 ## Sheet 7: Cost
 **Purpose:** Track unit costs and deployment statistics
+
+| Attribute | Value |
+|-----------|-------|
+| Unit Types | 141 different units |
+| Tracking | Cost + deployment count |
 
 **Key Columns:**
 - Units (unit names like Cataphract Lancer, Winged Hussars, Fire Lancers)
@@ -125,7 +184,6 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
 - Field (field battle deployments)
 - Optimal artillery types (Grapeshot, Mortar, Culverin, Hwacha)
 
-**Data:** 141 different unit types tracked
 **Use Case:** Budget management and optimal unit selection for different battle scenarios
 
 ---
@@ -133,8 +191,13 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
 ## Sheet 8: ExtraCost
 **Purpose:** Alternative cost tracking (possibly for extra/backup battles)
 
-**Structure:** Similar to Cost sheet but references ExtraSheet instead
-**Data:** Same 141 unit types
+| Attribute | Value |
+|-----------|-------|
+| Unit Types | 141 (same as Cost) |
+| References | ExtraSheet data |
+
+**Structure:** Similar to Cost sheet but references ExtraSheet instead of Unit Sheet
+
 **Use Case:** Parallel cost tracking for secondary battle scenarios
 
 ---
@@ -142,11 +205,15 @@ The **War Machine.xlsx** file is a comprehensive game management spreadsheet for
 ## Sheet 9: Attendance
 **Purpose:** Track player attendance at events/battles
 
+| Attribute | Value |
+|-----------|-------|
+| Tracking Rows | 117 |
+| Date Format | ISO format (e.g., 2025-03-02) |
+
 **Key Column:**
-- Attendance Tracker with dates (e.g., 2025-03-02)
+- Attendance Tracker with dates
 - Player names with tags (e.g., [CO] Skarlette, [HG]KingDingLing)
 
-**Data:** 117 rows tracking attendance
 **Use Case:** Monitor player participation and availability
 
 ---
