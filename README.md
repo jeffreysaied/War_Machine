@@ -49,6 +49,26 @@ This provides:
 - Sample data from first few rows
 - Non-empty row counts
 
+### Optimize Excel File
+To apply recommended improvements and create an optimized version:
+
+```bash
+python optimize_excel.py --backup
+```
+
+This will:
+- Remove 6,700+ unused rows (saves ~69% file size)
+- Wrap 2,900+ formulas with IFERROR (prevents errors)
+- Remove duplicate entries in Attendance sheet
+- Add freeze panes to all sheets (easier navigation)
+- Add leadership color coding (visual indicators)
+- Configure data validation for player names
+
+**Options:**
+- `--backup` - Create a backup before optimizing
+- `--output FILE` - Specify custom output filename
+- `--in-place` - Modify the original file (use with caution)
+
 ### Understand the Data
 For a comprehensive guide to what each sheet contains and how to use them:
 
@@ -59,9 +79,11 @@ cat WAR_MACHINE_UNDERSTANDING.md
 
 ## 📁 Files
 
-- **`War Machine.xlsx`** - The Excel data file (guild management system)
+- **`War Machine.xlsx`** - The original Excel data file (guild management system)
+- **`War Machine_optimized.xlsx`** - Optimized version with improvements applied (69% smaller)
 - **`read_excel.py`** - Raw data viewer - displays all cell contents
 - **`analyze_war_machine.py`** - Structure analyzer - shows organized summary
+- **`optimize_excel.py`** - Optimization script - applies recommended improvements
 - **`WAR_MACHINE_UNDERSTANDING.md`** - Complete documentation guide
 - **`EXCEL_IMPROVEMENT_RECOMMENDATIONS.md`** - Recommendations for Excel file improvements
 - **`requirements.txt`** - Python dependencies (openpyxl)
