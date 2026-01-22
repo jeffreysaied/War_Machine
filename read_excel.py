@@ -37,12 +37,6 @@ def read_excel_file(filename):
                 print("(Empty sheet)")
                 continue
             
-            # Print header
-            if rows:
-                header = rows[0]
-                print("Header:", header)
-                print()
-            
             # Print all data
             for i, row in enumerate(rows, start=1):
                 print(f"Row {i}: {row}")
