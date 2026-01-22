@@ -5,6 +5,7 @@ This repository contains tools to read, analyze, and understand the War Machine 
 ## 📋 Quick Links
 
 - **[WAR_MACHINE_UNDERSTANDING.md](WAR_MACHINE_UNDERSTANDING.md)** - Detailed documentation of all 9 sheets and their purposes
+- **[EXCEL_IMPROVEMENT_RECOMMENDATIONS.md](EXCEL_IMPROVEMENT_RECOMMENDATIONS.md)** - Recommendations for improving the Excel file
 - **War Machine.xlsx** - The master Excel file (9 sheets)
 
 ## 🔧 Requirements
@@ -62,6 +63,7 @@ cat WAR_MACHINE_UNDERSTANDING.md
 - **`read_excel.py`** - Raw data viewer - displays all cell contents
 - **`analyze_war_machine.py`** - Structure analyzer - shows organized summary
 - **`WAR_MACHINE_UNDERSTANDING.md`** - Complete documentation guide
+- **`EXCEL_IMPROVEMENT_RECOMMENDATIONS.md`** - Recommendations for Excel file improvements
 - **`requirements.txt`** - Python dependencies (openpyxl)
 
 ## 📊 What's Inside
